@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,32 +18,52 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41i-bu-miF">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Egg Timer" id="xwQ-fe-UjK">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="Gsr-ix-mMp"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="rOh-Ho-51t"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="Gsr-ix-mMp">
+                                            <connections>
+                                                <action selector="pausePressed:" destination="BYZ-38-t0r" id="i49-o5-s71"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="rOh-Ho-51t">
+                                            <connections>
+                                                <action selector="startPressed:" destination="BYZ-38-t0r" id="3QS-Yb-kkX"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-2k-OGC">
-                                <rect key="frame" x="0.0" y="1322" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="-10" id="rnd-Dc-SXv"/>
+                                    <barButtonItem title="-10" id="rnd-Dc-SXv">
+                                        <connections>
+                                            <action selector="minusTenPressed:" destination="BYZ-38-t0r" id="R5P-j0-35b"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="umI-8y-baO"/>
-                                    <barButtonItem title="Reset" id="9wi-WU-EbI"/>
+                                    <barButtonItem title="Reset" id="9wi-WU-EbI">
+                                        <connections>
+                                            <action selector="resetPressed:" destination="BYZ-38-t0r" id="1ZJ-CB-MxB"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Pm2-hb-bfa"/>
-                                    <barButtonItem title="+10" id="2O8-kr-vYl"/>
+                                    <barButtonItem title="+10" id="2O8-kr-vYl">
+                                        <connections>
+                                            <action selector="plusTenPressed:" destination="BYZ-38-t0r" id="ATf-7P-8hP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uc-se-kXm">
-                                <rect key="frame" x="471" y="653" width="82" height="60"/>
+                                <rect key="frame" x="166" y="338" width="82" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,6 +75,9 @@
                             <constraint firstItem="8uc-se-kXm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wPb-sd-yZL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelTime" destination="8uc-se-kXm" id="owb-2h-7Ek"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
