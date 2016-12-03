@@ -25,18 +25,37 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="xwQ-fe-UjK">
+                                    <navigationItem title="Egg Timer" id="xwQ-fe-UjK">
                                         <barButtonItem key="leftBarButtonItem" systemItem="pause" id="Gsr-ix-mMp"/>
                                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="rOh-Ho-51t"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-2k-OGC">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="-10" id="rnd-Dc-SXv"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="umI-8y-baO"/>
+                                    <barButtonItem title="Reset" id="9wi-WU-EbI"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Pm2-hb-bfa"/>
+                                    <barButtonItem title="+10" id="2O8-kr-vYl"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uc-se-kXm">
+                                <rect key="frame" x="112" y="297" width="179" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
         </scene>
     </scenes>
 </document>
